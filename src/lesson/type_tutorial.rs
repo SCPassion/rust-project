@@ -12,6 +12,8 @@ fn type_tutorial() {
     let _my_char = 'a';
     
     // Strings
+    // &str is a reference to a string slice. It is a reference to a fixed-size sequence of characters that can be stored either in the stack or the heap.
+    // String is a dynamic growable string type. It is a growable string stored in the heap.
     let _message: &str = "Simon"; // &str is a string slice, it is a reference to a string
     
     // Transform our string slice "Hi, Simon" into a dynamic string
