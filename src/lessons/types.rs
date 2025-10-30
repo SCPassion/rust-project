@@ -1,4 +1,4 @@
-fn type_tutorial() {
+fn types() {
     // Basic types
     let _my_first_bool = true;
     let _my_second_bool = false; // _ is used to ignore the value
