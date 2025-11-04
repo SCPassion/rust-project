@@ -58,7 +58,8 @@ impl Dog {
         Self { name }
     }
 
-    fn sleep(&self) { // override the default implementation of sleep method
+    fn sleep(&self) {
+        // override the default implementation of sleep method
         println!("Dog is sleeping!");
     }
 }

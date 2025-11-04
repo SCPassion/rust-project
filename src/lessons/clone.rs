@@ -15,13 +15,12 @@ fn clone() {
     println!("original_string is {}", original_string);
     // The modified string is the cloned string, because we are returning a new string from the function.
     println!("modified_string is {}", modified_string);
-
 }
 
 // This approach is useful when you want to modify the content of your variable, but you don't want to modify the original variable.
-fn modify_string(s: &String)-> String {
+fn modify_string(s: &String) -> String {
     let mut cloned_string = s.clone(); // cloing the immutable reference to a new mutablestring on the heap.
-    // The modification is made to the cloned string, not the original string.
+                                       // The modification is made to the cloned string, not the original string.
     cloned_string.push_str(" modified");
     cloned_string
 }

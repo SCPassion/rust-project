@@ -32,4 +32,7 @@ cargo run
 # Check the code for errors without compiling
 # This is useful to check the code for errors before compiling
 cargo check
+
+# Format the whole codebase
+rustfmt src/**/*.rs
 ```

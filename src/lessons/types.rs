@@ -10,17 +10,25 @@ fn types() {
     let _pi = 3.14;
 
     let _my_char = 'a';
-    
+
     // Strings
     // &str is a reference to a string slice. It is a reference to a fixed-size sequence of characters that can be stored either in the stack or the heap.
     // String is a dynamic growable string type. It is a growable string stored in the heap.
     let _message: &str = "Simon"; // &str is a string slice, it is a reference to a string
-    
+
     // Transform our string slice "Hi, Simon" into a dynamic string
     let _my_string: String = String::from("Hi, Simon"); // String is a dynamic string, it is a heap allocated string
 
     // arrays
-    let _days_of_week: [&str; 7] = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
+    let _days_of_week: [&str; 7] = [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+        "Sunday",
+    ];
     let _first_element = _days_of_week[0]; // first_element is a string slice
     let _last_element = _days_of_week[_days_of_week.len() - 1]; // last_element is a string slice
 

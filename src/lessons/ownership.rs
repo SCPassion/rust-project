@@ -1,8 +1,8 @@
 fn ownership() {
     // my_string is the owner of the string. Meaning that, it is responsible for allocating and deallocating the memory for the string.
     let my_string = String::from("hello"); // a dynamic string allocated on the heap
-    // When a value is assigned or passed to a new variable, the ownership is transferred to the new variable.
-    // Ensuring that only one variable can own the value at a time.
+                                           // When a value is assigned or passed to a new variable, the ownership is transferred to the new variable.
+                                           // Ensuring that only one variable can own the value at a time.
 
     let _my_slice = &my_string[0..2]; // This is a slice of the string, it is a reference to a substring of the string
 
@@ -13,7 +13,7 @@ fn ownership() {
     // Rust's ownership determins whether a value is stored on teh stack or the heap.
     // This decision is based on the size of the value and whether the value needs to be able to change in size at runtime.
 
-    let x= 5; // stored on the stack, we know the size of the value at compile time.
+    let x = 5; // stored on the stack, we know the size of the value at compile time.
     let y = String::from("hello"); // stored on the heap, we don't know the size of the value at compile time.
 
     // When a value is declared, Rust determines whether the variable can be stored on teh stack or heap.

@@ -18,7 +18,9 @@ fn input_calculations() -> Result<(), String> {
 
 fn get_f64_input() -> Result<f64, String> {
     let mut input = String::new();
-    io::stdin().read_line(&mut input).expect("Failed to read line");
+    io::stdin()
+        .read_line(&mut input)
+        .expect("Failed to read line");
 
     match input.trim().parse::<f64>() {
         Ok(num) => Ok(num),
@@ -28,14 +30,16 @@ fn get_f64_input() -> Result<f64, String> {
 
 fn get_operation(value1: f64, value2: f64) -> Result<Operation, String> {
     let mut input = String::new();
-    io::stdin().read_line(&mut input).expect("Failed to read line");
+    io::stdin()
+        .read_line(&mut input)
+        .expect("Failed to read line");
 
     match input.trim() {
         "+" => Ok(Operation::Add(value1, value2)),
         "-" => Ok(Operation::Subtract(value1, value2)),
         "*" => Ok(Operation::Multiply(value1, value2)),
         "/" => Ok(Operation::Divide(value1, value2)),
-        _ => Err("Unexpected operation input".to_string())
+        _ => Err("Unexpected operation input".to_string()),
     }
 }
 
@@ -44,14 +48,14 @@ enum Operation {
     Add(f64, f64),
     Subtract(f64, f64),
     Multiply(f64, f64),
-    Divide(f64, f64)
+    Divide(f64, f64),
 }
 
 fn calculate(operation: Operation) -> f64 {
     match operation {
-        Operation::Add(x,y ) => x + y,
-        Operation::Subtract(x,y ) => x - y,
-        Operation::Multiply(x,y ) => x * y,
-        Operation::Divide(x,y ) => x / y,
+        Operation::Add(x, y) => x + y,
+        Operation::Subtract(x, y) => x - y,
+        Operation::Multiply(x, y) => x * y,
+        Operation::Divide(x, y) => x / y,
     }
 }

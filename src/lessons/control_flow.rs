@@ -19,7 +19,8 @@ fn control_flow() {
     }
 
     //for loop
-    for number in 1..5 { // excluding 5
+    for number in 1..5 {
+        // excluding 5
         println!("Number is {}", number);
     }
 
@@ -48,7 +49,7 @@ fn control_flow() {
         5 => {
             println!("Five");
             println!("Five is a great number");
-        },
+        }
         _ => println!("Not a number between 1 and 5"),
     }
 

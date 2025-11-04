@@ -7,7 +7,7 @@ fn main() {
     // This is to prevent data races and other undefined behavior that can occur when multiple threads access the same data concurrently.
     // Having immutable and mutable references at the same time is not allowed.
 
-    // Data races: 
+    // Data races:
     // A data race occurs when 2 or more threads access the same memory location without any synchronization.
     // At least one of the threads is writing to the memory location, while the other threads are reading from the memory location.
     // This can lead to undefined behavior and bugs in the code.
@@ -19,14 +19,13 @@ fn main() {
 
     // &str is a reference to a string slice. It is a reference to a fixed-size sequence of characters that can be stored either in the stack or the heap.
 
-    print_string(my_ref); 
+    print_string(my_ref);
     println!("my_ref is {}", my_ref);
 
     // Mutable reference to a dynamic string on the heap.
     let mut my_string = String::from("hello");
     change_string(&mut my_string);
     println!("my_string is {}", my_string);
-
 }
 
 fn print_string(s: &String) {
