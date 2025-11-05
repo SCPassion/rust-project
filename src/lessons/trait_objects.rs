@@ -4,7 +4,7 @@
 
 // Polymorphism: allows objects of different types to be treated as objects of a common type, enabling the same code to work with different types.
 
-fn main() {
+fn trait_objects() {
     let _value = 5; // This will create a new value on the stack.
 
     // ================================================ Box pointer ================================================
