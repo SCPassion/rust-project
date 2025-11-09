@@ -1,4 +1,4 @@
-fn panics() {
+fn error_panics() {
     let veggies = ["carrots", "tomatoes", "potatoes"];
     chooseVeggie(veggies[0]);
     chooseVeggie(veggies[1]);
