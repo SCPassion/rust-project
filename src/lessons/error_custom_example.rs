@@ -20,6 +20,8 @@ fn read_file(filename: &str) -> Result<String, MyCustomError> {
         Ok(content) => Ok(content),
         Err(e) => Err(MyCustomError::Io(e)),
     }
+
+    // or: fs::read_to_string(filename).map_err(MyCustomError::Io) to simplify the code.
 }
 
 #[derive(Debug)]
