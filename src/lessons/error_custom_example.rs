@@ -22,6 +22,7 @@ fn read_file(filename: &str) -> Result<String, MyCustomError> {
     }
 
     // or: fs::read_to_string(filename).map_err(MyCustomError::Io) to simplify the code.
+    // .map_err works because we are using a custom error type which implements the Error trait.
 }
 
 #[derive(Debug)]
