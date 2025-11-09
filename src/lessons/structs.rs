@@ -35,8 +35,8 @@ fn structs() {
 }
 
 #[derive(Debug)] // With debug trait, we can print the struct in a debug format. using {:?}.
-                 // Structs are used to create custom data types.
-struct Book {
+// Structs are used to create custom data types.
+pub struct Book {
     title: String,
     author: String,
     publication_year: u32,
